@@ -63,12 +63,47 @@ public class ArrayEx09_정답 {
 		
 		while (true) {
 			
-			System.out.println("\n===메가 영화관===\n");
+			System.out.println("\n=== 메가 영화관 ===\n");
+			
+			for (int i = 0; i < seat.length; i++) {
+				System.out.print("[" + seat[i] + "] ");
+			}
+			System.out.println("\n\n");
+			System.out.println("1. 좌석 예매");
+			System.out.println("2. 종료");
+			operateSignal = scan.nextInt();
+			
+			if (operateSignal == 1) {
+				
+				System.out.println();
+				System.out.print("좌석 선택(1~7) : ");
+				getSeat = scan.nextInt()-1;
+				
+				
+				if (getSeat < 0 || getSeat >= 7) {
+					System.out.println("\n1~7까지의 좌석을 선택하여 주십시요. ");
+					continue;
+				}
+				
+				if (seat[getSeat] == 'X') {
+					seat[getSeat] = 'O';
+					totalSellingMoney += 12000;
+				}
+				
+				else System.out.println("\n !!!이미 예매가 완료된 자석입니다!!! ");
+				
+			}
+			
+			else if (operateSignal == 2) {
+				System.out.println("매출액 : " + totalSellingMoney + "원");
+				break;
+			}
+			else System.out.println("1~2중에 선택해주세요.\n");
+			
+			
 		}
 		
-		
-		
-		
+		scan.close();
 		
 	}
 	
