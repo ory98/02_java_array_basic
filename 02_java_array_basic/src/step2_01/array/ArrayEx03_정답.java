@@ -13,10 +13,12 @@ public class ArrayEx03_정답 {
 		// 문제1) for문을 이용하여 10부터 50까지 arr 배열에 저장
 		// 정답1) 10 20 30 40 50
 		
-		for (int i = 0; i <arr.length; i++) {
-			arr[i] = 10 * (i+1);
-			System.out.print(arr[i] + " ");				
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = (i+1)*10;
+			System.out.print(arr[i] + " ");
 		}
+		
+	
 		System.out.println("\n");
 		
 		// 문제2) 1번에서 생성한 arr에서 4의 배수만 출력
