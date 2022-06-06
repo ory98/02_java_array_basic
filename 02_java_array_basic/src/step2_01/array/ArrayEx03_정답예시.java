@@ -14,7 +14,7 @@ public class ArrayEx03_정답예시 {
 		// 문제1) for문을 이용하여 10부터 50까지 arr 배열에 저장
 		// 정답1) 10 20 30 40 50
 		
-		for (int i = 0; i < arr.length; i++) {
+		for (int i  = 0; i < arr.length; i++) {
 			arr[i] = 10 * (i+1); 
 			System.out.print(arr[i] + " ");
 		}
